@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Vue3 CapacitorJS Scaffold</string>
+    <string name="title_activity_main">Vue3 CapacitorJS Scaffold</string>
+    <string name="package_name">com.mrodrig.vue3capacitorjsscaffold</string>
+    <string name="custom_url_scheme">com.mrodrig.vue3capacitorjsscaffold</string>
+</resources>

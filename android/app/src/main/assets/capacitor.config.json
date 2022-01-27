@@ -1,0 +1,6 @@
+{
+	"appId": "com.mrodrig.vue3capacitorjsscaffold",
+	"appName": "Vue3 CapacitorJS Scaffold",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
