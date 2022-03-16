@@ -1,5 +1,14 @@
 # vue-capacitorjs-scaffold
 
+## Documentation
+
+* https://cli.vuejs.org/guide/creating-a-project.html
+* https://capacitorjs.com/solution/vue
+
+## Icons
+
+* https://materialdesignicons.com/
+
 ## Project setup
 ```
 npm install

@@ -1,30 +1,56 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="container">
+    <navigation-bar />
+
+    <router-view />
+
+    <navigation-tab-bar :navItems="navItems" />
   </div>
-  <router-view/>
 </template>
 
+<script>
+import { shallowRef } from 'vue';
+import HomeIcon from 'vue-material-design-icons/Home.vue';
+import NewsIcon from 'vue-material-design-icons/NewspaperVariant.vue';
+import CalendarIcon from 'vue-material-design-icons/Calendar.vue';
+import NavigationBar from '@/components/NavigationBar.vue';
+import NavigationTabBar from '@/components/NavigationTabBar.vue';
+
+export default {
+  name: 'app',
+  components: {
+    NavigationBar,
+    NavigationTabBar,
+  },
+  data() {
+    return {
+      navItems: [
+        { title: 'Home', route: '/', image: shallowRef(HomeIcon) },
+        { title: 'News', route: '/news', image: shallowRef(NewsIcon) },
+        { title: 'Events', route: '/events', image: shallowRef(CalendarIcon) },
+      ],
+    };
+  },
+};
+</script>
+
 <style lang="less">
+@import "./less/base.less";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  height: 100%;
+  color: @fontColor;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 100%;
 }
 </style>
